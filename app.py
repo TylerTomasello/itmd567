@@ -1,6 +1,6 @@
 import flask
 import logging
-import pymysql.cursors
+#import pymysql.cursors
 
 from flask import (Flask,
                    render_template,
