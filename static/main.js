@@ -2,11 +2,11 @@ import Vue from 'vue'
 
 function main()
 {
-  //Vue.options.delimiters = ["[[", "]]"];
+  Vue.options.delimiters = ["[[", "]]"];
   const routes = [
         {
             path: "/",
-            component: homeView,
+            component: Home,
             props: true
         },
         {

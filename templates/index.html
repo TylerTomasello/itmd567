@@ -12,42 +12,80 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/screen.css" />
-
+    <!--<link rel="stylesheet" href="/static/site.css" />-->
+    <script src="/static/main.js"></script>
   </head>
+
   <body>
+    <header id="header">
     <div id="mainApp">
-      {{ message }}
-    </div>
-      <header id="header">
-        <h1>Laundry</h1>
-        <nav id="navigation">
+    	<div id="headerNav">
+    		<div id="headerNavLeftGroup">
+    			<router-link class="headerAnchor dontUnderline" to="/">Home</router-link>
+    		</div>
+    		<nav id="navigation">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="pickup/">Request Pick-up</a></li>
-            <li><a href="about/">About Us</a></li>
-            <li><a href="contact/">Contact</a></li>
+            <router-link class="headerAnchor dontUnderline" to="/">
+              <li>Home</li>
+            </router-link>
+      			<router-link class="headerAnchor dontUnderline" to="/pickup">
+              <li>Request Pick-Up</li>
+      			</router-link>
+            <router-link class="headerAnchor dontUnderline" to="/about">
+              <li>About Us</li>
+      			</router-link>
+            <router-link class="headerAnchor dontUnderline" to="/contact">
+              <li>Contact</li>
+      			</router-link>
           </ul>
         </nav>
-      </header>
-      <main id="content">
-        <article id="primary">
-          <h2>Home</h2>
+    			<router-link class="headerAnchor dontUnderline" to="/shoppingcart"></router-link>
+    			<router-link v-if="!loggedIn" class="headerAnchor dontUnderline" to="/productdetails">Log In</router-link>
+    			<router-link v-else class="headerAnchor dontUnderline" to="/hey">Log Out</router-link>
 
-          <p>
-            Welcome to Laundry which is a service for busy people like you
-            to have your laundry picked up and washed for you and then dropped
-            off for you at your convienice.
-          </p>
-          <p>
-            Fell free to make a free account and try our service out.
-          </p>
+    			<router-link class="headerAnchor dontUnderline" to="/productdetails">Account</router-link>
 
-          <button type="button" class="btn btn-primary btn-lg">Sign Up</button>
-        </article>
-      </main>
-      <footer id="footer">
-      </footer>
-    <script src="/static/main.js"></script>
+
+    			<input id="headerNavSearchInput" type="text" class="form-control" placeholder="search">
+
+    	</div>
+  	<router-view id="currentView"></router-view>
+  	<div id="footer">
+  		&copy; Copyright 2018 .
+  	</div>
+  </div>
+</header>
+<!--
+  <body>
+    <header id="header">
+      <h1>Laundry</h1>
+      <nav id="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="pickup/">Request Pick-up</a></li>
+          <li><a href="about/">About Us</a></li>
+          <li><a href="contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="content">
+      <article id="primary">
+        <h2>Home</h2>
+
+        <p>
+          Welcome to Laundry which is a service for busy people like you
+          to have your laundry picked up and washed for you and then dropped
+          off for you at your convienice.
+        </p>
+        <p>
+          Fell free to make a free account and try our service out.
+        </p>
+
+        <button type="button" class="btn btn-primary btn-lg">Sign Up</button>
+      </article>
+    </main>
+    <footer id="footer">
+    </footer> -->
   </body>
 
 </html>
