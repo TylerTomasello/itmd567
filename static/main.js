@@ -7,13 +7,23 @@ function main()
   const homeV = {
         template: $("#homeV").html(),
         name: "homeV",
-    };
+      };
+
+  const pickup = {
+        template: $("#pickup").html(),
+        name: "pickup",
+      };
 
   const routes = [
         {
             path: "/",
             component: homeV,
-            //props: true
+            props: true
+        },
+        {
+            path: "/pickup",
+            component: pickup,
+            props: true
         },
     ];
 
@@ -27,7 +37,7 @@ function main()
         router,
 
         data: {
-          message: 'hello!!!'
+          //message: 'hello!!!'
             //loggedIn: true,
         }
     });

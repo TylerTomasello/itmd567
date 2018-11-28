@@ -27,7 +27,7 @@
             <router-link class="separate" to="/contact">Contact</router-link>
         </div>
       </header>
-      <router-view id="currentView"></router-view>
+      <router-view></router-view>
 
 
       <footer id="footer">
@@ -58,24 +58,19 @@
     </div>
   </template>
 
+
+  <template id="pickup">
+    <div>
+      <!-- <main id="content">
+        <article id="primary"> -->
+          <h2>Pick-Up</h2>
+
+          <p>
+            Hello test
+          </p>
+        <!-- </article>
+      </main> -->
+    </div>
+  </template>
+
 </html>
-
-<!-- <template id="home">
-	<div>
-		<div id="logoWrapper"></div>
-		<div id="topSellersWrapper">
-
-			<h1 class="pageHeader">Top Sellers</h1>
-
-			<div v-if="topSellers !== undefined"
-				 class="basicItemDisplayRows">
-				<div v-for="topSeller in topSellers">
-					<basic-item :item="topSeller"
-								:allow_shopping_cart_update="true"
-					></basic-item>
-					<hr>
-				</div>
-			</div>
-		</div>
-	</div>
-</template> -->
