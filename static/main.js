@@ -97,6 +97,7 @@ function main()
         router,
 
         data: {
+          loggedIn: true,
           //message: 'hello!!!'
             //loggedIn: true,
         }

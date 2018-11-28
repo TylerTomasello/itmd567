@@ -20,8 +20,14 @@
   <body>
     <div id="mainApp">
       <div class="rel">
-        <router-link class="btn btn-primary btn-sm" to="/signup">Sign Up</router-link>
-        <router-link class="btn btn-primary btn-sm" to="/login">Login</router-link>
+        <router-link v-if="loggedIn" class="btn btn-primary btn-sm" to="/signup">Sign Up</router-link>
+        <router-link v-else class="btn btn-primary btn-sm" to="/profile">Profile</router-link>
+
+        <router-link v-if="loggedIn" class="btn btn-primary btn-sm" to="/login">Login</router-link>
+        <router-link v-else class="btn btn-primary btn-sm" to="/">Logout</router-link>
+
+        <!-- <router-link v-if="!loggedIn" class="headerAnchor dontUnderline" to="/productdetails">Log In</router-link>
+        <router-link v-else class="headerAnchor dontUnderline" to="/hey">Log Out</router-link> -->
       </div>
       <header id="header">
         <router-link to="/"><h1>LaundryLift</h1></router-link>
@@ -37,6 +43,7 @@
 
 
       <footer id="footer">
+        &copy; Copyright 2018 Tyler Tomasello
       </footer>
     </div>
   </body>
