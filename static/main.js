@@ -100,7 +100,13 @@ function main()
           loggedIn: true,
           //message: 'hello!!!'
             //loggedIn: true,
+        },
+
+        methods:{
+          toggle: function(){
+            this.loggedIn = !this.loggedIn
         }
+    }
     });
 
     var date_input=$('input[name="date"]'); //our date input has the name "date"
