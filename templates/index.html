@@ -46,6 +46,22 @@
       <h2>Sign Up</h2>
 
       <p>
+        <form>
+          <div class="form-group">
+            <label for="fname">First Name:</label>
+            <input type="text" class="form-control" id="fname" placeholder="John">
+
+            <label for="lname">Last Name:</label>
+            <input type="text" class="form-control" id="lname" placeholder="Smith">
+
+            <label for="emailAddress">Email:</label>
+            <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+
+            <label for="passwordIn">Password:</label>
+            <input type="password" class="form-control" id="passwordIn" placeholder="password">
+          </div>
+          <router-link class="btn btn-primary btn-lg" to="/">Sign Up</router-link>
+        </form>
       </p>
     </div>
   </template>
@@ -56,6 +72,16 @@
       <h2>Login</h2>
 
       <p>
+        <form>
+          <div class="form-group">
+            <label for="emailAddress">Email:</label>
+            <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+
+            <label for="passwordIn">Password:</label>
+            <input type="password" class="form-control" id="passwordIn" placeholder="password">
+          </div>
+          <router-link class="btn btn-primary btn-lg" to="/">Login</router-link>
+        </form>
       </p>
     </div>
   </template>
