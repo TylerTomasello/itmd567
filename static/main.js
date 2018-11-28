@@ -109,7 +109,7 @@ function main()
         container: container,
         todayHighlight: true,
         autoclose: true,
-      })
+      });
  }
 
 $(document).ready(main);
