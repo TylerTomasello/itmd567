@@ -1,8 +1,8 @@
-import Vue from 'vue'
-
+// import Vue from 'vue'
+//
 function main()
 {
-  Vue.options.delimiters = ["[[", "]]"];
+  Vue.options.delimiters = ['[[', ']]'];
   const routes = [
         {
             path: "/",
@@ -22,7 +22,8 @@ function main()
 
     var app = new Vue({
         el: "#mainApp",
-        name: "mainApp",
+        //delimiters: ['[[', ']]'],
+        //name: "mainApp",
         router,
 
         data: {
@@ -30,6 +31,6 @@ function main()
             //loggedIn: true,
         }
     });
-}
-
-$(document).ready(main);
+// }
+//
+// $(document).ready(main);

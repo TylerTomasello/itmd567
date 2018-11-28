@@ -6,56 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/screen.css" />
-    <!--<link rel="stylesheet" href="/static/site.css" />-->
-    <script src="/static/main.js"></script>
+    <!-- <script src="/static/main.js"></script> -->
   </head>
 
-  <body>
-    <header id="header">
-    <div id="mainApp">
-    	<div id="headerNav">
-    		<div id="headerNavLeftGroup">
-    			<router-link class="headerAnchor dontUnderline" to="/">Home</router-link>
-    		</div>
-    		<nav id="navigation">
-          <ul>
-            <router-link class="headerAnchor dontUnderline" to="/">
-              <li>Home</li>
-            </router-link>
-      			<router-link class="headerAnchor dontUnderline" to="/pickup">
-              <li>Request Pick-Up</li>
-      			</router-link>
-            <router-link class="headerAnchor dontUnderline" to="/about">
-              <li>About Us</li>
-      			</router-link>
-            <router-link class="headerAnchor dontUnderline" to="/contact">
-              <li>Contact</li>
-      			</router-link>
-          </ul>
-        </nav>
-    			<router-link class="headerAnchor dontUnderline" to="/shoppingcart"></router-link>
-    			<router-link v-if="!loggedIn" class="headerAnchor dontUnderline" to="/productdetails">Log In</router-link>
-    			<router-link v-else class="headerAnchor dontUnderline" to="/hey">Log Out</router-link>
-
-    			<router-link class="headerAnchor dontUnderline" to="/productdetails">Account</router-link>
-
-
-    			<input id="headerNavSearchInput" type="text" class="form-control" placeholder="search">
-
-    	</div>
-  	<router-view id="currentView"></router-view>
-  	<div id="footer">
-  		&copy; Copyright 2018 .
-  	</div>
-  </div>
-</header>
-<!--
   <body>
     <header id="header">
       <h1>Laundry</h1>
@@ -85,7 +45,8 @@
       </article>
     </main>
     <footer id="footer">
-    </footer> -->
+    </footer>
+    <script src="./static/main.js"></script>
   </body>
 
 </html>
