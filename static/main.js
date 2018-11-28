@@ -14,6 +14,16 @@ function main()
         name: "pickup",
       };
 
+  const about = {
+        template: $("#about").html(),
+        name: "about",
+      };
+
+  const contact = {
+        template: $("#contact").html(),
+        name: "contact",
+      };
+
   const routes = [
         {
             path: "/",
@@ -23,6 +33,16 @@ function main()
         {
             path: "/pickup",
             component: pickup,
+            props: true
+        },
+        {
+            path: "/about",
+            component: about,
+            props: true
+        },
+        {
+            path: "/contact",
+            component: contact,
             props: true
         },
     ];
