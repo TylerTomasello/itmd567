@@ -34,6 +34,11 @@ function main()
         name: "contact",
       };
 
+  const profile = {
+        template: $("#profile").html(),
+        name: "profile",
+      };
+
   const routes = [
         {
             path: "/",
@@ -63,6 +68,11 @@ function main()
         {
             path: "/contact",
             component: contact,
+            props: true
+        },
+        {
+            path: "/profile",
+            component: profile,
             props: true
         },
     ];
