@@ -9,6 +9,16 @@ function main()
         name: "homeV",
       };
 
+  const signup = {
+        template: $("#signup").html(),
+        name: "signup",
+      };
+
+  const login = {
+        template: $("#login").html(),
+        name: "login",
+      };
+
   const pickup = {
         template: $("#pickup").html(),
         name: "pickup",
@@ -28,6 +38,16 @@ function main()
         {
             path: "/",
             component: homeV,
+            props: true
+        },
+        {
+            path: "/signup",
+            component: signup,
+            props: true
+        },
+        {
+            path: "/login",
+            component: login,
             props: true
         },
         {
