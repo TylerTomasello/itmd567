@@ -145,36 +145,35 @@ img, video, a {
 /* Layout styles */
 
 /*
+  Set the header link color to black and remove
+  text decoration.
+*/
+#header a {
+  text-decoration: none;
+  color: black;
+}
+
+/*
   Set the navigation id position and width
 */
 #navigation {
   /*position: absolute;*/
-  width: 100%;
+  /* width: 100%;
   top: 0;
   left: 0;
-}
+  padding: 15px;*/
 
-/*
-  Set the navigation list items on the left
-  taking up 1/4th of the width.
-*/
-#navigation li {
-  float: left;
-  width: 25%;
-}
-
-/*
-  Set the navigation links with padding, and remove
-  text decoration and change background color.
-*/
-#navigation a {
-  display: block;
+  display: grid;
   width: 100%;
-  padding-top: 0.611em; /* 11 / 18 = 0.611 */
-  padding-bottom: 0.611em;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto;
+  background-color: tan;
+  padding: 10px;
+}
+
+.separate {
   text-align: center;
   text-decoration: none;
-  background-color: tan;
 }
 
 /*
@@ -185,15 +184,6 @@ img, video, a {
 #navigation li {
   list-style-type: none;
   padding-bottom: 0;
-}
-
-/*
-  Set the header link color to black and remove
-  text decoration.
-*/
-#header a {
-  text-decoration: none;
-  color: black;
 }
 
 /*

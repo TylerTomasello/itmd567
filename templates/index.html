@@ -20,12 +20,12 @@
     <div id="mainApp">
       <header id="header">
         <h1>Laundry</h1>
-        <nav id="navigation">
-            <router-link to="/">Home</router-link>
-            <router-link to="/">Request Pick-up</router-link>
-            <router-link to="/">About Us</router-link>
-            <router-link to="/">Contact</router-link>
-        </nav>
+        <div id="navigation">
+            <router-link class="separate" to="/">Home</router-link>
+            <router-link class="separate" to="/pickup">Request Pick-up</router-link>
+            <router-link class="separate" to="/about">About Us</router-link>
+            <router-link class="separate" to="/contact">Contact</router-link>
+        </div>
       </header>
       <router-view id="currentView"></router-view>
 
