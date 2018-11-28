@@ -200,6 +200,15 @@ img, video, a {
   text-decoration: underline;
 }
 
+div.rel {
+  margin-top: 70px;
+  position: absolute;
+  right: 65px;
+  width: 200px;
+  height: 120px;
+  top: 0;
+}
+
 /* State Styles */
 
 /*

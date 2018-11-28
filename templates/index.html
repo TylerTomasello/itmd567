@@ -18,10 +18,13 @@
 
   <body>
     <div id="mainApp">
-      <header id="header">
-        <router-link to="/"><h1>LaundryLift</h1></router-link>
+      <div class="rel">
         <router-link class="btn btn-primary btn-sm" to="/signup">Sign Up</router-link>
         <router-link class="btn btn-primary btn-sm" to="/login">Login</router-link>
+      </div>
+      <header id="header">
+        <router-link to="/"><h1>LaundryLift</h1></router-link>
+
         <div id="navigation">
             <router-link class="separate" to="/">Home</router-link>
             <router-link class="separate" to="/pickup">Request Pick-up</router-link>
