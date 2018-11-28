@@ -204,6 +204,35 @@
   </template>
 
 
+  <template id="checkout">
+    <div>
+      <h2>Checkout</h2>
+
+      <p>
+        <form>
+          <div class="form-group">
+            <label for="cardNum">Credit/Debit Card Number:</label>
+            <input type="text" class="form-control" id="cardNum" placeholder="1234123412341234">
+
+            <label for="cardCode">CSC Security Code:</label>
+            <input type="text" class="form-control" id="cardCode" placeholder="567">
+
+            <label for="cardEx">Expiration:</label>
+            <input type="text" class="form-control" id="cardEx" placeholder="00/00">
+
+            <label for="cardName">Name on Card:</label>
+            <input type="text" class="form-control" id="cardName" placeholder="John Smith">
+
+            <input type="checkbox" class="form-check-input" id="checkRem">
+            <label class="form-check-label" for="checkRem">Save card information</label>
+          </div>
+          <router-link class="btn btn-success btn-lg" to="/">Order Pick-Up</router-link>
+        </form>
+      </p>
+    </div>
+  </template>
+
+
   <template id="about">
     <div>
       <h2>About Us</h2>
@@ -267,8 +296,16 @@
     <div>
       <h2>Profile</h2>
 
+      <img src="./static/Images/profile.PNG" alt="ProfileImage">
       <p>
+        John Smith
       </p>
+      <div>
+        Email: jsmith@gmail.com
+      </div>
+      <div>
+        Phone: (123)-456-7890
+      </div>
     </div>
   </template>
 </html>

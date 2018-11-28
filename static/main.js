@@ -24,6 +24,11 @@ function main()
         name: "pickup",
       };
 
+  const checkout = {
+        template: $("#checkout").html(),
+        name: "checkout",
+      };
+
   const about = {
         template: $("#about").html(),
         name: "about",
@@ -58,6 +63,11 @@ function main()
         {
             path: "/pickup",
             component: pickup,
+            props: true
+        },
+        {
+            path: "/checkout",
+            component: checkout,
             props: true
         },
         {
