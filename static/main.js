@@ -3,17 +3,18 @@
 function main()
 {
   Vue.options.delimiters = ['[[', ']]'];
+
+  const homeV = {
+        template: $("#homeV").html(),
+        name: "homeV",
+    };
+
   const routes = [
         {
             path: "/",
-            component: Home,
-            props: true
+            component: homeV,
+            //props: true
         },
-        {
-            path: "/about/",
-            name: "about",
-            component:
-        }
     ];
 
     const router = new VueRouter({
@@ -22,8 +23,7 @@ function main()
 
     var app = new Vue({
         el: "#mainApp",
-        //delimiters: ['[[', ']]'],
-        //name: "mainApp",
+        name: "mainApp",
         router,
 
         data: {
@@ -31,6 +31,6 @@ function main()
             //loggedIn: true,
         }
     });
-// }
-//
-// $(document).ready(main);
+ }
+
+$(document).ready(main);

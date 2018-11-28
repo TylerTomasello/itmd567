@@ -204,6 +204,11 @@ img, video, a {
   text-decoration: none;
 }
 
+#currentView
+{
+    overflow-y: scroll;
+}
+
 /* State Styles */
 
 /*
