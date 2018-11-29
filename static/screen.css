@@ -249,10 +249,13 @@ div.rel {
     width: 64.28571428%; /*450 / 700 = 0.6428571429*/
     float: left;
   }
-  /*
-  #footer {
-    width: 64.28571428%; /*450 / 700 = 0.6428571429
+
+  /* #footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 64.28571428%; /*450 / 700 = 0.6428571429 
     float: right;
-  }
-  */
+  } */
+
 }
