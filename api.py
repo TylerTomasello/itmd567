@@ -41,6 +41,12 @@ def register_apis(app, db):
         result = posts.insert_one(post_data)
         return
 
+    @app.route("/api/pickup/<address>")
+    def get_pickup_by_address():
+        address_post = posts.find_one({'address': address})
+
+        return jsonify(address_post)
+
     @app.route("/api/checkout/")
     def post_checkout():
         posts = db.checkout_collection
@@ -53,3 +59,9 @@ def register_apis(app, db):
 
         result = posts.insert_one(post_data)
         return
+
+    @app.route("/api/checkout/<cardNum>")
+    def get_checkout_by_cardnum():
+        cardNum_post = posts.find_one({'cardNum': card})
+
+        return jsonify(cardNum_post)
