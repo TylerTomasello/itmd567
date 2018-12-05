@@ -77,7 +77,20 @@ function main()
   const profile = {
         template: $("#profile").html(),
         name: "profile",
-      };
+      },
+
+      data: {
+        return {
+          fname: "Tyler",
+          lname: "Tomasello",
+          email: "ttomasel@hawk.iit.edu",
+          phone: "(708)-423-8191"
+        }
+      }
+
+      methods: {
+          }
+        };
 
   const routes = [
         {
