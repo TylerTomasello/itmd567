@@ -25,3 +25,31 @@ def register_apis(app, db):
         email_post = posts.find_one({'email': email})
 
         return jsonify(email_post)
+
+    @app.route("/api/pickup/")
+    def post_pickup():
+        posts = db.pickup_collection
+        post_data = {
+            'address': address,
+            'city': city,
+            'state': state,
+            'zip': zip,
+            'date': date,
+            'time': time
+            }
+
+        result = posts.insert_one(post_data)
+        return
+
+    @app.route("/api/checkout/")
+    def post_checkout():
+        posts = db.checkout_collection
+        post_data = {
+            'cardNum': card,
+            'csc': csc,
+            'exp': exp,
+            'name': name
+            }
+
+        result = posts.insert_one(post_data)
+        return
