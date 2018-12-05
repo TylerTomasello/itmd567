@@ -7,7 +7,7 @@ from flask import (jsonify,
                    make_response)
 
 
-def register_apis(app, db_connection):
+def register_apis(app, db):
     @app.route("/api/user/")
 
-    @app.route("/api/get_product_by_id/<int:id_>")
+    @app.route("/api/user/")

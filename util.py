@@ -7,7 +7,7 @@ class DBConnectionManager(object):
 
     @property
     def db(self):
-        mongo_client = pymongo.MongoClient(host="10.129.111.21:27017")
+        mongo_client = pymongo.MongoClient(host="mongodb://localhost:27017/")
 
         db = mongo_client.users
 
