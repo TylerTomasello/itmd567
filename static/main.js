@@ -98,8 +98,6 @@ function main()
 
         data: {
           loggedIn: false,
-          //message: 'hello!!!'
-            //loggedIn: true,
         },
 
         methods:{
