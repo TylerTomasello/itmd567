@@ -70,7 +70,6 @@ function main()
 
         methods: {
             }
-          }
       };
 
   const checkout = {
@@ -88,8 +87,7 @@ function main()
 
         methods: {
             }
-          }
-      };
+          };
 
   const about = {
         template: $("#about").html(),
