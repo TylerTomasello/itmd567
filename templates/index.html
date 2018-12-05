@@ -20,10 +20,10 @@
   <body>
     <div id="mainApp">
       <div class="rel">
-        <router-link v-if="loggedIn" class="btn btn-primary btn-sm" to="/signup">Sign Up</router-link>
+        <router-link v-if="!loggedIn" class="btn btn-primary btn-sm" to="/signup">Sign Up</router-link>
         <router-link v-else class="btn btn-primary btn-sm" to="/profile">Profile</router-link>
 
-        <router-link v-if="loggedIn" class="btn btn-primary btn-sm" to="/login">Login</router-link>
+        <router-link v-if="!loggedIn" class="btn btn-primary btn-sm" to="/login">Login</router-link>
         <router-link v-else class="btn btn-primary btn-sm" to="/">Logout</router-link>
 
         <!-- <router-link v-if="!loggedIn" class="headerAnchor dontUnderline" to="/productdetails">Log In</router-link>
