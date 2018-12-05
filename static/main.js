@@ -12,15 +12,14 @@ function main()
   const signup = {
         template: $("#signup").html(),
         name: "signup",
-      },
 
-      data: {
+      data() {
         return {
           fname: undefined,
           lname: undefined,
           email: undefined
-        }
-      }
+        };
+      },
 
       methods: {
         async addUser()
@@ -35,24 +34,26 @@ function main()
                   result = posts.insert_one(post_data)
               this.addUser = result;
             }
+          }
       };
 
   const login = {
         template: $("#login").html(),
         name: "login",
-      },
 
-      data: {
+      data() {
         return {
           email: undefined
-        }
-      }
+        };
+      },
 
       methods: {
         async loginUser()
             {
               this.email = await $.get("/api/users/email");
-            };
+            }
+          }
+        };
 
   const pickup = {
         template: $("#pickup").html(),
@@ -77,16 +78,15 @@ function main()
   const profile = {
         template: $("#profile").html(),
         name: "profile",
-      },
 
-      data: {
+      data() {
         return {
           fname: "Tyler",
           lname: "Tomasello",
           email: "ttomasel@hawk.iit.edu",
           phone: "(708)-423-8191"
-        }
-      }
+        };
+      },
 
       methods: {
           }

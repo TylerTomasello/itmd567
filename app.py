@@ -19,7 +19,7 @@ def home():
 def main():
     #logger.info("Loading app with Flask version {}".format(flask.__version__))
 
-    register_apis(app, db_connection_manager.db)
+    #register_apis(app, db_connection_manager.db)
 
     #app.logger.handlers = logger.handlers
     #app.logger.setLevel(logging.DEBUG)
