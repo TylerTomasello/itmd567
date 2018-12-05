@@ -58,11 +58,37 @@ function main()
   const pickup = {
         template: $("#pickup").html(),
         name: "pickup",
+
+        data() {
+          return {
+            fname: "Tyler",
+            lname: "Tomasello",
+            email: "ttomasel@hawk.iit.edu",
+            phone: "(708)-423-8191"
+          };
+        },
+
+        methods: {
+            }
+          }
       };
 
   const checkout = {
         template: $("#checkout").html(),
         name: "checkout",
+
+        data() {
+          return {
+            fname: "Tyler",
+            lname: "Tomasello",
+            email: "ttomasel@hawk.iit.edu",
+            phone: "(708)-423-8191"
+          };
+        },
+
+        methods: {
+            }
+          }
       };
 
   const about = {
