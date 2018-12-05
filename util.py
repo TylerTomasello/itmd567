@@ -14,4 +14,4 @@ class DBConnectionManager(object):
         # Get collection
         user_collection = db.user_collection
 
-        test_collection.insert_one({"firstName": "Tyler", "lastName": "Tomasello", "email": "ttomasel@hawk.iit.edu"})
+        user_collection.insert_one({"firstName": "Tyler", "lastName": "Tomasello", "email": "ttomasel@hawk.iit.edu"})
