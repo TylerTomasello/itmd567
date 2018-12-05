@@ -74,15 +74,15 @@ function main()
           async pickupUserA()
               {
                 this.address = await $.get("/api/pickup/address");
-              }
+              },
           async pickupUserC()
               {
                 this.city = await $.get("/api/pickup/city");
-              }
+              },
           async pickupUserS()
               {
                 this.state = await $.get("/api/pickup/state");
-              }
+              },
             }
       };
 
