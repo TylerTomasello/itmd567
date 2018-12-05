@@ -40,7 +40,19 @@ function main()
   const login = {
         template: $("#login").html(),
         name: "login",
-      };
+      },
+
+      data: {
+        return {
+          email: undefined
+        }
+      }
+
+      methods: {
+        async loginUser()
+            {
+              this.email = await $.get("/api/users/email");
+            };
 
   const pickup = {
         template: $("#pickup").html(),
