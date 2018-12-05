@@ -1,14 +1,22 @@
 // import Vue from 'vue'
-//
+
+// Declaration of the main to run the javascript objects
 function main()
 {
+  //change delimiters to better use
   Vue.options.delimiters = ['[[', ']]'];
 
+  /* All of the const are diferent views because they call different templates
+  to utitlize one html page
+  */
+
+  //this is for the home view
   const homeV = {
         template: $("#homeV").html(),
         name: "homeV",
       };
 
+  //this is for the signup view
   const signup = {
         template: $("#signup").html(),
         name: "signup",
@@ -37,6 +45,7 @@ function main()
           }
       };
 
+  //this is for the login view
   const login = {
         template: $("#login").html(),
         name: "login",
@@ -55,6 +64,7 @@ function main()
           }
         };
 
+  //this is for the pickup view
   const pickup = {
         template: $("#pickup").html(),
         name: "pickup",
@@ -86,6 +96,7 @@ function main()
             }
       };
 
+  // this is for the checkout view
   const checkout = {
         template: $("#checkout").html(),
         name: "checkout",
@@ -107,16 +118,19 @@ function main()
             }
           };
 
+  //this is for the about page view
   const about = {
         template: $("#about").html(),
         name: "about",
       };
 
+  //this is for the contact page view
   const contact = {
         template: $("#contact").html(),
         name: "contact",
       };
 
+  //this is for the profile page view
   const profile = {
         template: $("#profile").html(),
         name: "profile",
@@ -134,6 +148,7 @@ function main()
           }
         };
 
+  //these are the routes for each page when the router-link is clicked
   const routes = [
         {
             path: "/",
@@ -177,10 +192,13 @@ function main()
         },
     ];
 
+    //this is used to switch through the pages
     const router = new VueRouter({
         routes // short for `routes: routes`
     });
 
+    //this is the main view that appears when the page is accessed.
+    //Also, it has the navigation bar with login and signup buttons.
     var app = new Vue({
         el: "#mainApp",
         name: "mainApp",
@@ -197,6 +215,8 @@ function main()
     }
     });
 
+    /* this is a javascript operation that I used so that when the date input is
+       pressed then a calendar pops up for a date selection*/
     var date_input=$('input[name="date"]'); //our date input has the name "date"
     var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
     date_input.datepicker({
@@ -207,4 +227,5 @@ function main()
       });
  }
 
+//DOM manipulation is called to perform all the javascript operations
 $(document).ready(main);
