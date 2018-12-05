@@ -61,14 +61,28 @@ function main()
 
         data() {
           return {
-            fname: "Tyler",
-            lname: "Tomasello",
-            email: "ttomasel@hawk.iit.edu",
-            phone: "(708)-423-8191"
+            address: undefined,
+            city: undefined,
+            state: undefined,
+            zip: undefined,
+            date: undefined,
+            time: undefined
           };
         },
 
         methods: {
+          async pickupUserA()
+              {
+                this.address = await $.get("/api/pickup/address");
+              }
+          async pickupUserC()
+              {
+                this.city = await $.get("/api/pickup/city");
+              }
+          async pickupUserS()
+              {
+                this.state = await $.get("/api/pickup/state");
+              }
             }
       };
 
@@ -78,14 +92,18 @@ function main()
 
         data() {
           return {
-            fname: "Tyler",
-            lname: "Tomasello",
-            email: "ttomasel@hawk.iit.edu",
-            phone: "(708)-423-8191"
+            cardNum: undefined,
+            csc: undefined,
+            exp: undefined,
+            name: undefined
           };
         },
 
         methods: {
+          async checkoutUser()
+              {
+                this.cardNum = await $.get("/api/checkout/cardNum");
+              }
             }
           };
 
