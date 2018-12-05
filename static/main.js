@@ -12,6 +12,29 @@ function main()
   const signup = {
         template: $("#signup").html(),
         name: "signup",
+      },
+
+      data: {
+        return {
+          fname: undefined,
+          lname: undefined,
+          email: undefined
+        }
+      }
+
+      methods: {
+        async addUser()
+            {
+              posts = db.user_collection
+                  post_data = {
+                      'firstName': this.fname,
+                      'lastName': this.lname,
+                      'email': this.email
+                      }
+
+                  result = posts.insert_one(post_data)
+              this.addUser = result;
+            }
       };
 
   const login = {
